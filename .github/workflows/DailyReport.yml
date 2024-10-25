@@ -5,7 +5,8 @@ on:
     branches:
       -main
   workflow_dispatch:
-TZ: Asia/Shanghai
+env:
+  TZ: Asia/Shanghai
 
 jobs:
   Get-RSS:
