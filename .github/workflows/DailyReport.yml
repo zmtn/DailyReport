@@ -1,0 +1,23 @@
+name: Run Daily Report
+
+on:
+  push:
+    branches:
+      -main
+en:
+  TZ: Asia/Shanghai
+
+jobs:
+  Get-RSS:
+    name: Run the Script
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repository
+      uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Check the Linux Memory
+      run: |
+          echo path
